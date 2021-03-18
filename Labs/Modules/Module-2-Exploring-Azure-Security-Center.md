@@ -5,11 +5,7 @@
 #### 🎓 Level: 100 (Beginner)
 #### ⌛ Estimated time to complete this lab: 60 minutes
 
-## Objectives
-Create a new Microsoft Account enable with Azure Trial Subscription
-This section is intended to deploy Azure resources in an automated way to get you started quickly or in case you need to re-provision your environment.
-
-### Exercise 1: Understanding Azure Security Center dashboard
+## Exercise 1: Understanding Azure Security Center dashboard
 
 1.	Navigate to the **Azure Portal** (https://portal.azure.com) using the credentials you created in the previous module.
 2.	From the left navigation pane, click on **Security Center**. You can also navigate to Azure Security Center dashboard by using the top search bar.
@@ -64,7 +60,7 @@ Resources are divided by their health status. Clicking on this tile will redirec
 ![Overview: Inventory tile](../Images/inventory-tile.png)
 
 
-### Exercise 2: Exploring Secure Score and Recommendations
+## Exercise 2: Exploring Secure Score and Recommendations
 
 **Exploring Secure Score**
 
@@ -129,11 +125,15 @@ Exploring secure score
 }
 ```
 
+
+
+![Recommendation top menu](../Images/view-remediation-logic.png)
+
+
+
 9.	On the bottom part, **select a resource** (the single storage account on the unhealthy tab) and **click Remediate**.
 
 10. On the right pane, review the implications for this remediation and press **Remediate 1 resource**.
-
-![Remediate a resource](../Images/asc-storage-remediate-resource.gif?raw=true)
 
 11. Wait for a notification: ✅ **Remediation successful** - Successfully remediated the issues on the selected 
 resources. Note: It can take several minutes after remediation completes to see the resources in the 'healthy resources' tab.
@@ -146,18 +146,29 @@ Asset inventory dashboard allows you to get a single pane of glass view to all y
 
 1.	From Security Center’s sidebar, select **Inventory**
 2.	Hover to the **Summaries strip** at the top of the page.
-3.	Notice the total number of resources: **15**
+
+![Remediate a resource](../Images/inventory.png)
+
+3.	Notice the total number of resources: **20**
 
 > ⭐ Notice: <br>
 > The total number of resources are the ones which are connected to Security Center and NOT the total number of resources that you have in your subscriptions/s.
 
-4.	Notice the number of **unhealthy resources: 11** (resources with active recommendations based on the selected filter)
+4.	Notice the number of **unhealthy resources: 14** (resources with active recommendations based on the selected filter)
 5.	Notice the **unmonitored resources: 0** (indicates if there are resources with Log Analytics agent deployed but with health issues). Since we enabled the auto-provisioning in the previous module, all existing VMs are covered and connected = monitored.
 6.	Use the **Filter by name** box to search for **linux**. You should now see a filtered view containing your desired resource: *asclab-linux*
 7.	Hover on the **recommendations** column to see a tooltip with the active recommendations. You should expect to see **8 active out of 16** recommendations – these are the recommendations you must attend.
 8.	Open the resource health pane by selecting the resource. Click on **asclab-linux**. You can also right click on any resource and select **view resource**.
+
+![Remediate a resource](../Images/linux-vm.png)
+
 9.	On the resource health pane for **asclab-linux**, review the virtual machine information alongside with a recommendation list.
+
+![Remediate a resource](../Images/linux-recom.png)
+
 10.	From the filter menu, select the **Resource Group** filter and then **asclab-asc**. Using this filter, you can see all resources related to the predefined Kubernetes resources which are monitored with no active recommendations. Clear the filter by selecting **Resource Group** and then **Select all**.
+
+![Remediate a resource](../Images/filter-rg.png)
 
 > Notice! The entire grid can be filtered and sorted
 
@@ -174,7 +185,16 @@ Asset inventory dashboard allows you to get a single pane of glass view to all y
 
 13.	Notice the **Security findings** filter – it allows you to find all resources that are vulnerable by a specific vulnerability. You can also search for CVE, KB ID, name and missing update.
 14.	From the filter pane, select **Azure Defender** and value **On**. On the **Resource Group** select **asclab**. From the top menu bar, click on **Download CSV report**. You will get a snapshot to work on it offline already filtered. You can also right click on any of the resource and upgrade to Azure Defender plan (when applicable).
-15.	From the top menu, click on **view in resource graph explorer**. On the resource graph explorer blade, click on **Run Query**. You should now have the same list of resources and columns like in the previous step. This query can be editable for your needs and here it gets very powerful.
+
+![Inventory: Assign tags](../Images/download-csv.png)
+
+15.	From the top menu, click on **Open query**. On the resource graph explorer blade, click on **Run Query**. You should now have the same list of resources and columns like in the previous step. This query can be editable for your needs and here it gets very powerful.
+
+![Inventory: Assign tags](../Images/open-query.png)
+
+
+![Inventory: Assign tags](../Images/run-query.png)
+
 16.	Save the query for later use by clicking on **Save as** from the top menu. You can use it to create periodic reports. Name the report as *asc-filtered-query* and select **save**.
 
 > ⭐ Good to know: <br>
