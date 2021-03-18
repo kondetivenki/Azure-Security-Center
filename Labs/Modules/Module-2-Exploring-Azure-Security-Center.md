@@ -9,9 +9,6 @@
 Create a new Microsoft Account enable with Azure Trial Subscription
 This section is intended to deploy Azure resources in an automated way to get you started quickly or in case you need to re-provision your environment.
 
-#### Prerequisites
-To get started with Security Center, you must have a subscription to Microsoft Azure. If you do not have a subscription, you can sign up for a free account. Click here.
-
 ### Exercise 1: Understanding Azure Security Center dashboard
 
 1.	Navigate to the **Azure Portal** (https://portal.azure.com) using the credentials you created in the previous module.
@@ -22,51 +19,50 @@ Each of these pillars also has its own dedicated dashboard allowing deeper insig
 > ❗ Important: <br>
 > It takes few hours for all tiles on the oerview page to update.
 
-![Azure Security Center: Overview dashboard](../Images/asc-dashboard-overview.gif?raw=true)
+![Azure Security Center: Overview dashboard](../Images/asc-dashboard-overview-updated.png)
 
-4.	The new overview page also includes a new tile for **Asset Inventory Dashboard** to make it easy to find and filter individual resources.
-
-![Azure Security Center: Asset inventory](../Images/asc-dashboard-inventory.gif?raw=true)
-
-5.	Note the **top menu** bar which allows to view and filter subscriptions by selecting the **subscriptions button**.
+4.	Note the **top menu** bar which allows to view and filter subscriptions by selecting the **subscriptions button**.
 In this lab we will use only one but selecting different/additional subscriptions will adjust the interface to reflect the security posture for the selected subscriptions.
 
-6.	Click on the **What’s new** button – a new tab opens with the latest release notes where you can stay current on the new features, bug fixes and more.
-7.	Note the **high-level numbers** at the top menu; This view allows you to see a summary of your subscriptions, active recommendations, security alerts alongside with connected cloud accounts (AWS account and GCP projects – will be discussed in the next modules).
+5.	Click on the **What’s new** button – a new tab opens with the latest release notes where you can stay current on the new features, bug fixes and more.
+6.	Note the **high-level numbers** at the top menu; This view allows you to see a summary of your subscriptions, active recommendations, security alerts alongside with connected cloud accounts (AWS account and GCP projects – will be discussed in the next modules).
 
 ![Azure Security Center: Top menu](../Images/asc-dashboard-top-menu.gif?raw=true)
 
-8.	From the top menu bar, **click** on **Azure subscriptions**.
-9.	On the **Coverage** page, note that **Azure subscription 1** is fully covered – means that your subscription is covered by Azure Defender. (you should also see a message: *Looking good! The subscriptions below are fully protected*)
+7.	From the top menu bar, **click** on **Azure subscriptions**.
+8.	On the **Coverage** page, note that **Azure subscription 1** is fully covered – means that your subscription is covered by Azure Defender. (you should also see a message: *Looking good! The subscriptions below are fully protected*)
 
 ![Azure Security Center: Coverage](../Images/asc-subscriptions-coverage.gif?raw=true)
 
 > ⭐ Good to know: <br>
 > This page shows a list of subscriptions and their coverage type. You can use this page to find subscriptions that are not covered by Azure Security Center and help you identify “shadow IT” subscriptions.
 
-10.	Go back to the **Overview** page, and look at the **Secure Score** tile, you can see your current score along with the number of completed controls and recommendations. Clicking on this tile will redirects you to drill down view across subscriptions.
+9.	Go back to the **Overview** page, and look at the **Secure Score** tile, you can see your current score along with the number of completed controls and recommendations. Clicking on this tile will redirects you to drill down view across subscriptions.
 
 ![Overview: Secure Score tile](../Images/asc-overview-secure-score-tile.gif?raw=true)
 
 > ⭐ Good to know: <br>
 > The higher the score, the lower the identified risk level.
 
-11.	On the **Azure Defender** tile, you can see the coverage of your connected resources (for the currently selected subscriptions) and the recent alerts, color-coded by severity. Your current resource coverage should be **100% which means full protection**. Clicking on this tile will redirects you Azure Defender dashboard.
-12.	On the **Regulatory Compliance** tile, you can get insights into your compliance posture based on continuous assessment of your both Azure and hybrid cloud environments. This tile shows only 4 standards which are SOC TSP, ISO 27001, PCI DSS 3.2.1 and Azure CIS 1.1.0. Clicking on this tile will redirects you to Regulatory Compliance dashboard – where you can add additional standards and explore the current ones.
-13.	The last tile on the overview page is the **Inventory** – it shows the number of unmonitored VMs alongside with the total covered resources - **you should expect to have zero unmonitored VMs**.
+10.	On the **Azure Defender** tile, you can see the coverage of your connected resources (for the currently selected subscriptions) and the recent alerts, color-coded by severity. Your current resource coverage should be **100% which means full protection**. Clicking on this tile will redirects you Azure Defender dashboard.
+
+
+![Overview: Azure Defender tile](../Images/azure-defender-tile.png)
+
+
+11.	On the **Regulatory Compliance** tile, you can get insights into your compliance posture based on continuous assessment of your both Azure and hybrid cloud environments. This tile shows only 4 standards which are SOC TSP, ISO 27001, PCI DSS 3.2.1 and Azure CIS 1.1.0. Clicking on this tile will redirects you to Regulatory Compliance dashboard – where you can add additional standards and explore the current ones.
+
+![Overview: Regulatory Compliance tile](../Images/regulatory-compliance-tile.png)
+
+12.	The last tile on the overview page is the **Inventory** – it shows the number of unmonitored VMs alongside with the total covered resources - **you should expect to have zero unmonitored VMs**.
 Resources are divided by their health status. Clicking on this tile will redirects you to the asset inventory dashboard where you can explore your resource and their security posture – see a dedicated exercise below.
 
 > ❗ Important: <br>
 > Unmonitored VMs are considered to as virtual machines that have Log Analytics agent deployed, but the agent isn't sending data or has other health issues.
 
-14.	On the right pane, you can find the **Insights** section which offers tailored items for your environments: 
 
-- Most prevalent recommendations by resources
-- Security controls with the highest potential increase
-- Recent security alerts
-- Most attacked resources
-- Recent blog posts from our official [ASC blog](https://techcommunity.microsoft.com/t5/azure-security-center/bg-p/AzureSecurityCenterBlog)
-- Link to the [ASC Community repository on GitHub](https://github.com/Azure/Azure-Security-Center)
+![Overview: Inventory tile](../Images/inventory-tile.png)
+
 
 ### Exercise 2: Exploring Secure Score and Recommendations
 
