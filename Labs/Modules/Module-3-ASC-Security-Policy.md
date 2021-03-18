@@ -8,7 +8,7 @@
 ## Objectives
 This exercise guides you through the current Security Center policies, based on Azure Policy, and shows you where to enable or disable Security Center polices.
 
-### Exercise 1: Overview of the ASC policy
+## Exercise 1: Overview of the ASC policy
 
 1.	On Security Center blade, from the left navigation pave, click on **Security policy**.
 2.	On Policy Management page, select **Azure subscription**.
@@ -34,25 +34,26 @@ Effect | Description
 > ❗ Important: <br>
 > You should see a different subscription GUID on your environment
 
-7.	Look for **Subnets should be associated with a Network Security Group** recommendation under the **Network** category. This recommendation is currently set to **Disabled** action.
-8.	Click on the assign assignment: **ASC Default (subscription: dd82589b-444c-45a8-863a-816243ce017d)**. Azure Security Center assess your environment and audit data and do not enforce without your approval.
-9.	On the Edit Initiative Assignment page, click on **Parameters**
-10.	On the Parameters page, you can see the full list of recommendations associated with the **Enable Monitoring in Azure Security Center** initiative which is assigned as **ASC default**.
-11.	On the **Network Security Groups on the subnet level should be enabled**, change the action to AuditIfNotExists to enable monitoring of NSGs on subnets.
-12.	Click on **Review + save**
-13.	On the review tab, you can see your changes under the Parameters section: **networkSecurityGroupsOnSubnetsMonitoringEffect: AuditIfNotExists**
+7.	Click on the assign assignment: **ASC Default (subscription: dd82589b-444c-45a8-863a-816243ce017d)**. Azure Security Center assess your environment and audit data and do not enforce without your approval.
+8.	On the Edit Initiative Assignment page, click on **Parameters**
+9.	On the **Network Security Groups on the subnet level should be enabled**, change the action to AuditIfNotExists to enable monitoring of NSGs on subnets.
+10.	Click on **Review + save**
+11.	On the review tab, you can see your changes under the Parameters section: **networkSecurityGroupsOnSubnetsMonitoringEffect: AuditIfNotExists**
 
-![Modifying Security Center default policy assignment](../Images/asc-default-policy-nsg-recommendation.gif?raw=true)
+![Modifying Security Center default policy assignment](../Images/asc-default-policy-nsg-recommendation.png)
 
-14.	Click **Save**. Wait for the policy update until complete successful.
+13.	Click **Save**. Wait for the policy update until complete successful.
 
-### Exercise 2: Explore Azure Policy
+## Exercise 2: Explore Azure Policy
 1.	On Azure Portal, navigate to **Azure Policy blade**. You can use the search box on the upper part or  navigate to: https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyMenuBlade
 2.	From the left navigation pane, under the **Authoring** section, click on **Definitions** to explore the built-in policy definitions and initiatives.
 3.	From the top menu, use the filter button and set Category as **Security Center** and Definitions Type as Initiative
 4.	You can now see two built-in initiatives used by Azure Security Center:
-    -	*Enable Monitoring in Azure Security Center*
+    -	*Azure Security Benchmark*
     -	*[Preview]: Enable Data Protection Suite*
+
+![policy assignment](../Images/policy.png)
+
 5.	Notice the number of policies included in each initiative (policies column)
 6.	Both initiatives are assigned to your subscription automatically. To see current assignments, click on **Assignment** from the left navigation pane. Both policy initiatives have a different name for the assignment, for example:
 
@@ -62,7 +63,7 @@ Effect | Description
 7.	Click on **ASC Default** to edit assignment details
 8.	As you can see, this is the same assignment page as presented in the previous section. Click **Cancel**.
 
-### Exercise 3: Create resource exemption for a recommendation
+## Exercise 3: Create resource exemption for a recommendation
 
 Resource exemption will allow increased granularity for you to fine-tune recommendations by providing the ability to exempt certain resources from evaluation.
 When working with a recommendation, you can create an exemption by clicking the ellipsis menu on the right side and then select create exemption.
@@ -72,18 +73,23 @@ Note: Exemptions is a premium Azure policy capability that's offered for Azure D
 1.	Open **Security Center blade** and from the left navigation pane and select **Recommendations**.
 2.	Expend **Secure management ports** security control.
 3.	Select the **Management ports should be closed on your virtual machines** recommendation.
+
+![policy assignment](../Images/secure-management-ports.png)
+
 4.	On the list of **unhealthy resources**, see the current resources: *asclab-win* and *asclab-linux*.
 5.	Select the **asclab-win** resource and then click on **Create exemption**.
 
 ![Create exemption](../Images/asc-management-ports-resource-exemption.gif?raw=true)
 
 6.	The create **exemption pane** opens:
-    - Keep the name as **ASC-asclab-win-restrictAccessToManagementPortsMonitorin**.
+    - Keep the name as **ASC-asclab-win-restrictAccessToManagementPortsMonitoring**.
     - Switch the **expiration** toggle button **ON** and set datetime for two days ahead on 12:00 AM.
     - Select **Waiver** as exemption category.
     - Provide a description: **Testing exemption capability – module 3**.
-    - Select **Save**.
-    - 
+    - Select **Create**.
+
+![Exempt tab](../Images/exempt-scope.png)
+
 > ⭐ Good to know: <br>
 > **Mitigated** - This issue isn't relevant to the resource because it's been handled by a different tool or process than the one being suggested
 > **Waiver** - Accepting the risk for this resource
@@ -96,6 +102,8 @@ Note: Exemptions is a premium Azure policy capability that's offered for Azure D
 8.	Open the **Not applicable** tab to review your exempted resource – you can see our resource along with the reason / description value.
 9.	Exemption rules is based on Azure Policy capability. Therefore, you can track all your exemptions from Azure Policy blade as well.
 10.	Navigate to **Azure Policy blade** and select **Exemptions** from the left navigation pane. Notice your newly created exemption listed there.
+
+![Exempttion tab](../Images/exemptions-policy.png)
 
 ### Exercise 4: Create a policy enforcement and deny
 
@@ -110,6 +118,8 @@ Note: Exemptions is a premium Azure policy capability that's offered for Azure D
 
 > ❗ Important: <br>
 > Security misconfigurations are a major cause of security incidents
+
+![Secure Transfer](../Images/secure-transfer.png)
 
 5.	On the **Deny - Prevent resource creation**, select **Azure subscription 1** (which is currently set to audit mode). This allow you to ensure that from now on, storage account without the security transfer feature turned on will be denied.
 
