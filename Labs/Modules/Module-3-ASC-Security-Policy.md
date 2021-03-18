@@ -8,26 +8,18 @@
 ## Objectives
 This exercise guides you through the current Security Center policies, based on Azure Policy, and shows you where to enable or disable Security Center polices.
 
-#### Prerequisites
-To get started with Security Center, you must have a subscription to Microsoft Azure. If you do not have a subscription, you can sign up for a free account. Click here.
-
 ### Exercise 1: Overview of the ASC policy
 
 1.	On Security Center blade, from the left navigation pave, click on **Security policy**.
-2.	On Policy Management page, select **Azure subscription 1**.
+2.	On Policy Management page, select **Azure subscription**.
 3.	As you can see on the top part, there is 1 assignment at the **Security center default policy** which is ASC default.
 
-![Security center default policy](../Images/asc-default-policy-subscription.gif?raw=true)
+![Security center default policy](../Images/asc-default-policy-subscription.png)
 
 Note: This is the default policy for Azure Security Center recommendations which is enabled by default on your subscription. This is the default set of policies monitored by Azure Security Center. It was automatically assigned as part of onboarding to Security Center. The default assignment contains only audit policies. For more information please visit https://aka.ms/ascpolicies
 
-4.	To view the effective policy, click on **View effective policy**.
-5.	On the selected scope (Azure subscription 1 with 1 security policy assignments), you can see overall effective policies in Security Center divided into groups. Each group contains some of the policies found in the assigned initiative:
-
-    - Compute and Apps
-    - Network
-    - Data
-    - Identity
+4.	To view the policy, click on **ASC Default**.
+5.	On the selected scope (Azure subscription 1 with 1 security policy assignments), you can see overall effective policies in Security Center.
 
 6.	As you can see, policies are set to different effects based on the order of evaluation:
 
