@@ -78,14 +78,25 @@ Navigate to Azure Policy blade. You can also select this [link](https://portal.a
 
 8.	Click **Groups**, to define your groups and subgroups to be used in your initiative. To add a new group, click **Create Group**.
 9.	Create a new group, for this example we will call **Group 1**, select a subgroup, **Sub-group1** and provide a description. Please aware to the additional metadata which can be used as well. The location of the policyMetadata object that has additional details about the control and compliance domain. Click **Save** to create the new group.
+
+![Group create](../Images/group-policy.png)
+
 10.	Repeat the previous step to create additional group, for example: Group 2
 11.	Now you should have two groups to help you organize your policies within the initiative.
 12.	Click on the **Policies** tab. Here you can add policy definitions, both built-in and custom. Click Add policy definition(s). Select your desired polices, if you create a benchmark, you can also leverage existing policy definitions from **Microsoft managed** tab. For example, you can choose the following policies and select Add:
     -	Audit virtual machines without disaster recovery configured
     -	Azure Backup should be enabled for Virtual Machines
     -	Audit VMs that do not use managed disks
+
+![Group create](../Images/add-policy.png)
+
 13.	Each policy on the list, has its definition name, reference ID and the associated group. However, you do need to define a group for each policy. To do so, click on the **…** to open the context menu and select **Edit groups**.
 14.	Make sure all policies are associated to a group. Please notice that policies can be associated to multiple groups.
+
+![edit group](../Images/edit-group.png)
+
+![edit group](../Images/edit-group1.png)
+
 15.	You can assign policy and initiative parameters to be used during the assignment process. Skip this section and click on Review + Create to validate your settings. Then, click on Create.
 16.	You should now see your new initiative listed – **Custom Benchmark** along with the additional metadata (scope, category, etc.)
 17.	To assign your new security policy, open **Security Center blade**.
