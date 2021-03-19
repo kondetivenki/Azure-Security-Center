@@ -130,15 +130,22 @@ Note: Exemptions is a premium Azure policy capability that's offered for Azure D
 ![Auditing on SQL server should be enabled](../Images/asc-auditing-sql.gif?raw=true)
 
 7.	On the recommendations page, from the top menu bar, click on **Enforce** button. Using this option allow you to take advantage of Azure policy’s DeployIfNotExist effect and automatically remediate non-compliant resources upon creation.
+
+![Sql Auditing](../Images/auditing-create.png)
+
 8.	Once the configuration pane opens with all of the policy configuration options, select the following configuration settings:
 
 * On Scope, select **Azure subscription 1**. **Click Select**.
 * Click **Next**
-* Keep retention days as is and select then resource group **asclab**
+* Keep retention days as it is and select then resource group **asclab**
 Select **Review + create** to assign the policy on your subscription.
 * Click **Create**
 
+![Sql Auditing](../Images/auditing-create1.png)
+
 1. On the recommendation page, **select** the SQL Server resource found on the **unheatlhy resources** tab (asclab-sql-xxx) and click **Remediate**. Change the retention days parameter to 180 and then click **Remediate 1 resource**. By doing both operations, you can now be ensure your existing resources and new ones will be enabled for auditing. Auditing on your SQL Server helps you track database activities across all databases on the server and save them in an audit log.
+
+![Sql Auditing](../Images/auditing-create2.png)
 
 10.	[Click here](https://docs.microsoft.com/en-us/azure/security-center/prevent-misconfigurations#recommendations-with-denyenforce-options "Recommendations with deny/enforce options") to view a full list of recommendations with deny/enforce options along with detailed explanation of this capability.
 11.	[Click here](https://docs.microsoft.com/en-us/azure/security-center/secure-score-security-controls#security-controls-and-their-recommendations "Security controls and their recommendations") to review a list of security controls and their recommendations.
