@@ -15,10 +15,13 @@ This exercise guides you through the current Security Center policies, based on 
 3.	On the top strip, notice the number of **passed vs. failed controls** across standards.
 4.	On the main page, select **ISO 27001** standard. Notice the different compliance controls mapped to assessments.
 
-![Regulatory compliance assessment and standards](../Images/asc-regulatory-compliance-assessment-standards.gif?raw=true)
+![Regulatory compliance assessment and standards](../Images/asc-regulatory-compliance-assessment-standards.png)
 
 5.	Locate the **Communications security** compliance control. Notice the compliance domain **A13.2. Information transfer** and expend to show **A13.2.1. Information transfer policies and procedures** – both are currently *failed*.
 6.	From this view you can also remediate assessments. Click the first assessment **Function App should only be accessible over HTTPS**.
+
+![Remmediate function app](../Images/communications-security.png)
+
 7.	On the recommendation *Function App should only be accessible over HTTPS*, select the unhealthy resource (asclab-fa-xxx) and click **Remediate**. Confirm by selecting **Remediate 1 resource**.
 
 ![Remmediate function app](../Images/asc-remmediate-function-app.gif?raw=true)
@@ -32,17 +35,25 @@ This exercise guides you through the current Security Center policies, based on 
 You can add additional industry standards (represented as compliance packages) such as IST SP 800-53 R4, SWIFT CSP CSCF-v2020, UK Official and more.
 
 1.	From the top menu bar, select **Manage compliance policies**.
+
+![Manage compliance policies](../Images/manage-compliance-policies.png)
+
 2.	Select a scope to assign the new package: **Azure subscription 1**.
 3.	On the **Industry & regulatory standards** section, notice the out of the box standards. Click on **Add more standards**.
 4.	On the **Add regulatory compliance standards**, locate the **Azure CIS 1.1.0 (New)** standard and select **Add**.
+
+![Manage compliance policies](../Images/add-more-standards.png)
+
 5.	Click **Review + create** and then **Create**.
 
-![Add CIS 1.1.0 (New) Standard](../Images/asc-azure-cis-new-standard.gif?raw=true)
+![Review + create](../Images/add-more-standards-create.png)
 
 > ❗ Important: <br>
 > It will take a while until the change takes an effect (2-3 hours).
 
 6.	**Azure CIS 1.1.0 (New)** should now be listed on the standards list.
+
+![Add CIS 1.1.0 (New) Standard](../Images/asc-azure-cis-new-standard.gif?raw=true)
 
 ### Exercise 3: Creating your own benchmark
 
@@ -54,11 +65,17 @@ Navigate to Azure Policy blade. You can also select this [link](https://portal.a
 
 1.	From the left pane, select **Definitions**.
 2.	From the top menu, select **+ initiative definition** to create a new policy set definition.
+
+![Benchmark Policy](../Images/benchmark-policy.png)
+
 3.	On the Basics tab, select a **scope as a location for the new definition**. The recommended approach is to select management groups.
 4.	Select a name, for example: **Custom Benchmark**.
 5.	Provide an informative description so others can be clear on what is the purpose of this new security policy.
 6.	Select **Category**. You can decide to use existing one (for example: Security Center) or to create your own one. *The recommended approach is to use a custom one so you can quickly filter policy definitions and initiatives when needed (for example: Contoso)*.
 7.	Select **Version** number. Each policy definition and initiative contain a version in its metadata section. You can decide to have major versions (1.0), minor version (1.1) and so. See this file for additional instructions. Click **Next**.
+
+![Benchmark Next](../Images/benchmark-create.png)
+
 8.	Click **Groups**, to define your groups and subgroups to be used in your initiative. To add a new group, click **Create Group**.
 9.	Create a new group, for this example we will call **Group 1**, select a subgroup, **Sub-group1** and provide a description. Please aware to the additional metadata which can be used as well. The location of the policyMetadata object that has additional details about the control and compliance domain. Click **Save** to create the new group.
 10.	Repeat the previous step to create additional group, for example: Group 2
