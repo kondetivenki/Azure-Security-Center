@@ -177,6 +177,8 @@ Add each policy one by one:
 
 1. Select **Review + Create**. Click **Create**.
 
+![custom initiative](../Images/policy-definition.png)
+
 ***Add a custom initiative to your subscription***
 
 1.	Navigate to Security Center, and the Security policy page from the sidebar.
@@ -186,6 +188,8 @@ Add each policy one by one:
 
 3.	In the Security policy page, under Your custom initiatives, click **Add a custom initiative**.
 4.	Your newly created initiative is listed: *Contoso Security Benchmark*. Select **Add***.
+
+![Add custom initiative](../Images/custom-initiatives.png)
 
 ![Assign custom initiative](../Images/asc-assign-custom-initiative.gif?raw=true)
 
