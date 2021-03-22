@@ -43,8 +43,14 @@ Application control helps you deal with malicious and/or unauthorized software, 
 
 1.	From Security Center sidebar, click on **Azure Defender**.
 2.	On the Advanced protection part at the bottom, click on **Adaptive application control** (you should see 2 unprotected status).
+
+![Adaptive Application Control1](../Images/adaptive-application-control.png)
+
 3.	The Adaptive application controls page opens with your VMs grouped into the following tabs: Configured, Recommended and No recommendations.
 4.	Click on the **Recommended** tab.
+
+![Adaptive Application Control2](../Images/adaptive-application-control2.png)
+
 5.	If this tab does not contain any group yet, it means that Security Center needs at least two weeks of data to define the unique recommendations per group of machines.
 
 ### Exercise 3: File Integrity Monitoring
@@ -54,6 +60,11 @@ It maps the current state of these items with the state during the previous scan
 
 1.	From Security Center sidebar, click on **Azure Defender**.
 2.	On the Advanced protection part at the bottom, click on **File Integrity Monitoring** tile.
+
+![File Integrity Monitoring1](../Images/File-Integrity-Monitoring.png)
+
 3.	On the FIM configuration page, select the **Log Analytics workspace listed** `asclab-la-xxx` (or just by clicking on the Upgrade icon - it indicates that FIM is not enabled for the selected workspace).
 4.	On the Enable FIM, **review the default recommended settings** for Windows files, Registry and Linux files.
 5.	Click on **Enable File Integrity Monitoring** button.
+
+![File Integrity Monitoring2](../Images/File-Integrity-Monitoring2.png)
