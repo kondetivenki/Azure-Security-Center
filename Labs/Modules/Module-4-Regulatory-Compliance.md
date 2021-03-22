@@ -101,9 +101,18 @@ Navigate to Azure Policy blade. You can also select this [link](https://portal.a
 16.	You should now see your new initiative listed – **Custom Benchmark** along with the additional metadata (scope, category, etc.)
 17.	To assign your new security policy, open **Security Center blade**.
 18.	From the left navigation pane, under Management section, click on **Security policy**.
-19.	Select a **desired scope** to assign your new security policy (it could be either Management Group or Subscription).
+19.	Select a **Subscription** to assign your new security policy.
+
+![security policy](../Images/security-policy.png)
+
 20.	On **Security policy** page, hover to Your custom initiatives and select **Add a custom initiative**. 
+
+![Add a custom initiative](../Images/add-a-custom-initiative.png)
+
 21.	On **Add custom initiative**, your new standard should be listed there, so you can click on **Add** to assign to it. Once assigned, it will be listed as a recommendation in the Recommendations blade and be added in the Regulatory Compliance dashboard.
+
+![Custom Initiative](../Images/custom-initiative.png)
+
 22.	Follow the **on-screen instructions to assign it on the desired scope**. If you decided to include parameters in your initiative, now you should be able to fulfill them. Click **Review + create** to start the validation process and then **Create**.
 23.	Now your new security benchmark is displayed in regulatory compliance along with the built-in regulatory standards.
 
