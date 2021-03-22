@@ -82,10 +82,18 @@ In the previous step, we used the dismiss option to manually dismiss a single al
 > Note, you can create suppression rules on a management group level by using a built-in policy definition named Deploy - Configure suppression rules for Azure Security Center alerts in Azure Policy. To suppress alerts at the subscription level, you can use the Azure portal or REST APIs.
 
 8. You can change your existing suppression rules or create new ones: from the top menu, select **Suppression rules**. 
+
+![Create sample virtual machine security alerts](../Images/alert-suppression.png)
+
 9. Click on the rule you have recently created: `Testing-AutoDismiss-KV`.
 10. Change the expiration to be a month ahead from the current date. Click **Apply**.
 11. View dismissed alerts: On the Security alerts main page, on the filters section, change the Status filter to show only **Dismissed** items.
+
+![Create sample virtual machine security alerts](../Images/suppression-filter-options.png)
+
 12. You should now expect to see only **1 dismissed alert**: High volume of operations in a Key Vault Sample alert.
+
+![Create sample virtual machine security alerts](../Images/suppression-filter.png)
 
 ### Exercise 3: Accessing Security Alerts using Graph Security API
 
@@ -95,9 +103,19 @@ In this exercise, we will use one of the endpoints which allows to retrieve a li
 
 1.	Navigate to [List alerts](https://docs.microsoft.com/en-us/graph/api/alert-list?view=graph-rest-1.0) page.
 2.	Scroll down to the **Example** section for a request or [click here](https://docs.microsoft.com/en-us/graph/api/alert-list?view=graph-rest-1.0&tabs=http#example).
+
+![Create sample virtual machine security alerts](../Images/rest-tryit.png)
+
 3.	On the HTTP tab, review the endpoint URL: `https://graph.microsoft.com/v1.0/security/alerts`.
-4.	On the right side, click on **Try it** to load the graph explorer with the required endpoint.
-5.	Click on **Run query** button.
+4.	You need to login using credentials given in the Environment Details.
+
+![Create sample virtual machine security alerts](../Images/rest-execute-login.png)
+
+5.	On the right side, click on **Try it** to load the graph explorer with the required endpoint.
+6.	Click on **Run query** button.
+
+![Create sample virtual machine security alerts](../Images/rest-execute.png)
+
 6.	You should now see a sample response preview in JSON format.
 
 ### Continue with the next lab: [Module 7 - Exporting ASC information to a SIEM](../Modules/Module-7-Exporting-ASC-information-to-a-SIEM.md)
