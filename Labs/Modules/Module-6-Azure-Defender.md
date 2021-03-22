@@ -15,6 +15,9 @@ Here let’s cover the new Alert Simulation, which should be out in the first we
 1.	Open the preview page of security alerts by using this [link](https://portal.azure.com/?feature.argsecurityalerts=true&feature.customportal=false#blade/Microsoft_Azure_Security/SecurityMenuBlade/7)
 2.	Create an alert simulation for VM:
     - On Security alerts page, click on **Sample alerts** button.
+    
+    ![Create sample virtual machine security alerts](../Images/SampleAlerts.png)
+    
     - Select **Azure subscription 1**.
     - On the Azure Defender plans, keep only **Virtual Machines** selected.
     - Click on the **Create sample alerts** button to trigger the alert simulation for VMs.
@@ -28,9 +31,15 @@ Here let’s cover the new Alert Simulation, which should be out in the first we
 
 5.	Click on the **Digital currency mining related behavior detected alert**.
 6.	The details pane opens. Notice the alert properties at the top (severity, status, and time) along with the alerts description and affected resources. At the bottom part, you can see the kill chain intent of the alert based on the MITRE ATT&CK® framework. This specific alert is at the *Execution* phase.
+
+![Create sample virtual machine security alerts](../Images/Alert-Description.png)
+
 7.	To explore the full details of the alert, click on **View full details**.
+
+![Create sample virtual machine security alerts](../Images/Alert-Description-Details.png)
+
 8.	Create an alert simulation for Key Vaults:
-    - On Security alerts page, click on **Create sample alerts** button.
+    - On Security alerts page, click on **sample alerts** button.
     - Select **Azure subscription 1**.
     - On the Azure Defender plans, keep only **Key Vaults** selected.
     - Click **Create sample alerts** button to trigger the alert simulation for Key Vaults.
@@ -38,7 +47,12 @@ Here let’s cover the new Alert Simulation, which should be out in the first we
 10.	On the alerts page, you should now see 5 different sample events for a resource named `Sample-KV`. Each alert has the `Sample alert` banner next to it.
 11.	Click on the **Access from a TOR exit node to a Key Vault** alert.
 12.	Click on the **View full details** to see additional information related to the event.
+
+![Create sample virtual machine security alerts](../Images/TOR-exit-node.png)
+
 13.	At the top menu, dismiss the alert by changing the status from Active to **Dismiss**.
+
+![Create sample virtual machine security alerts](../Images/TOR-alert-dismiss.png)
 
 > Note: You can choose to trigger sample alerts for additional Azure Defender plans.
 
@@ -49,9 +63,15 @@ In the previous step, we used the dismiss option to manually dismiss a single al
 
 1.	From Security Center sidebar, select **Security alerts**.
 2.	Select **High volume of operations in a Key Vault** alert and then click on **Take action**.
+
+![Create sample virtual machine security alerts](../Images/Highvolume-Alert-Description-.png)
+
 3.	Expend the Suppress similar alerts section and click on **Create Suppression Rule**.
 4.	The new suppression rule pane opens, provide a rule name: *Testing-AutoDismiss-KV*.
 5.	On the reason field, select Other and leave a comment: *Lab 6 exercise*.
+
+![Create sample virtual machine security alerts](../Images/Create-Suppression-Rule.png)
+
 6.	Set rule expiration to be tomorrow (just a day ahead). **Click Apply and wait 10 minutes for the new rule to be applied.**
 7.	Validate your alert suppression rule:
     - From the top menu, click on the **Create sample alerts** button.
@@ -62,10 +82,18 @@ In the previous step, we used the dismiss option to manually dismiss a single al
 > Note, you can create suppression rules on a management group level by using a built-in policy definition named Deploy - Configure suppression rules for Azure Security Center alerts in Azure Policy. To suppress alerts at the subscription level, you can use the Azure portal or REST APIs.
 
 8. You can change your existing suppression rules or create new ones: from the top menu, select **Suppression rules**. 
+
+![Create sample virtual machine security alerts](../Images/alert-suppression.png)
+
 9. Click on the rule you have recently created: `Testing-AutoDismiss-KV`.
 10. Change the expiration to be a month ahead from the current date. Click **Apply**.
 11. View dismissed alerts: On the Security alerts main page, on the filters section, change the Status filter to show only **Dismissed** items.
+
+![Create sample virtual machine security alerts](../Images/suppression-filter-options.png)
+
 12. You should now expect to see only **1 dismissed alert**: High volume of operations in a Key Vault Sample alert.
+
+![Create sample virtual machine security alerts](../Images/suppression-filter.png)
 
 ### Exercise 3: Accessing Security Alerts using Graph Security API
 
@@ -75,9 +103,19 @@ In this exercise, we will use one of the endpoints which allows to retrieve a li
 
 1.	Navigate to [List alerts](https://docs.microsoft.com/en-us/graph/api/alert-list?view=graph-rest-1.0) page.
 2.	Scroll down to the **Example** section for a request or [click here](https://docs.microsoft.com/en-us/graph/api/alert-list?view=graph-rest-1.0&tabs=http#example).
+
+![Create sample virtual machine security alerts](../Images/rest-tryit.png)
+
 3.	On the HTTP tab, review the endpoint URL: `https://graph.microsoft.com/v1.0/security/alerts`.
-4.	On the right side, click on **Try it** to load the graph explorer with the required endpoint.
-5.	Click on **Run query** button.
+4.	You need to login using credentials given in the Environment Details.
+
+![Create sample virtual machine security alerts](../Images/rest-execute-login.png)
+
+5.	On the right side, click on **Try it** to load the graph explorer with the required endpoint.
+6.	Click on **Run query** button.
+
+![Create sample virtual machine security alerts](../Images/rest-execute.png)
+
 6.	You should now see a sample response preview in JSON format.
 
 ### Continue with the next lab: [Module 7 - Exporting ASC information to a SIEM](../Modules/Module-7-Exporting-ASC-information-to-a-SIEM.md)

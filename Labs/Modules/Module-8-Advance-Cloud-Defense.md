@@ -42,10 +42,11 @@
 Application control helps you deal with malicious and/or unauthorized software, by allowing only specific applications to run on your machines.
 
 1.	From Security Center sidebar, click on **Azure Defender**.
-2.	On the Advanced protection part at the bottom, click on **Adaptive application control** (you should see 2 unprotected status).
+2.	On the Advanced protection part at the bottom, click on **Adaptive application control**
 
 ![Adaptive Application Control1](../Images/adaptive-application-control.png)
 
+2.	On the Advanced protection part at the bottom, click on **Adaptive application control**.
 3.	The Adaptive application controls page opens with your VMs grouped into the following tabs: Configured, Recommended and No recommendations.
 4.	Click on the **Recommended** tab.
 
