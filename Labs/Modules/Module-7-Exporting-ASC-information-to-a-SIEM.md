@@ -31,10 +31,16 @@ In this exercise, you will understand how to configure the continuous export for
 11.	Click on the **asclab-la-xxx** workspace.
 12.	From the workspace’s sidebar, click on the **Logs** button.
 13.	On the welcome page, click on the **Get Started** button and then **close the Queries window**.
-14.	From the left pane, notice the following tables: `SecureScores`, `SecureScoreControls`, `SecurityAlert`, `SecurityRecommendation` and `SecurityNestedRecommendation`.
+
+![Continuous export settings page](../Images/log-analytic-started.png)
+
+14.	From the left pane, notice the following tables: `SecureityEvent`, `SecurityBaseline`, `SecurityBaselineSummary` and  `UpdateSummary`.
+
+![Respective tables in the Log Analytics workspace](../Images/Log-editor-tables.png)
+
 15.	Query the tables later on to validate data streaming - double click on the desired table to open a new query. Then click **Run**.
 
-![Respective tables in the Log Analytics workspace](../Images/asc-continuous-export-tables.gif?raw=true)
+![Respective tables in the Log Analytics workspace](../Images/log-editor-run.png)
 
 ### Exercise 2: Integration with Azure Sentinel
 
@@ -47,7 +53,7 @@ In this exercise, you will understand how to configure the continuous export for
 7.	On the Data connectors page, use the search field and type: *Azure Defender*.
 8.	Select the **Azure Defender** connector and then click on **Open connector page**.
 
-![ASC pricing & settings page](../Images/asc-sentinel-data-connectors.gif?raw=true)
+![ASC pricing & settings page](../Images/Azure-defender-open.png)
 
 9.	On the Configuration section, locate the **Azure subscription 1** and change the toggle button to **Connect**. Wait for the connection status to be: `Connected`.
 
