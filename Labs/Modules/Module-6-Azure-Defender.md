@@ -31,9 +31,15 @@ Here let’s cover the new Alert Simulation, which should be out in the first we
 
 5.	Click on the **Digital currency mining related behavior detected alert**.
 6.	The details pane opens. Notice the alert properties at the top (severity, status, and time) along with the alerts description and affected resources. At the bottom part, you can see the kill chain intent of the alert based on the MITRE ATT&CK® framework. This specific alert is at the *Execution* phase.
+
+![Create sample virtual machine security alerts](../Images/Alert-Description.png)
+
 7.	To explore the full details of the alert, click on **View full details**.
+
+![Create sample virtual machine security alerts](../Images/Alert-Description-Details.png)
+
 8.	Create an alert simulation for Key Vaults:
-    - On Security alerts page, click on **Create sample alerts** button.
+    - On Security alerts page, click on **sample alerts** button.
     - Select **Azure subscription 1**.
     - On the Azure Defender plans, keep only **Key Vaults** selected.
     - Click **Create sample alerts** button to trigger the alert simulation for Key Vaults.
@@ -41,7 +47,12 @@ Here let’s cover the new Alert Simulation, which should be out in the first we
 10.	On the alerts page, you should now see 5 different sample events for a resource named `Sample-KV`. Each alert has the `Sample alert` banner next to it.
 11.	Click on the **Access from a TOR exit node to a Key Vault** alert.
 12.	Click on the **View full details** to see additional information related to the event.
+
+![Create sample virtual machine security alerts](../Images/TOR-exit-node.png)
+
 13.	At the top menu, dismiss the alert by changing the status from Active to **Dismiss**.
+
+![Create sample virtual machine security alerts](../Images/TOR-alert-dismiss.png)
 
 > Note: You can choose to trigger sample alerts for additional Azure Defender plans.
 
@@ -52,9 +63,15 @@ In the previous step, we used the dismiss option to manually dismiss a single al
 
 1.	From Security Center sidebar, select **Security alerts**.
 2.	Select **High volume of operations in a Key Vault** alert and then click on **Take action**.
+
+![Create sample virtual machine security alerts](../Images/Highvolume-Alert-Description-.png)
+
 3.	Expend the Suppress similar alerts section and click on **Create Suppression Rule**.
 4.	The new suppression rule pane opens, provide a rule name: *Testing-AutoDismiss-KV*.
 5.	On the reason field, select Other and leave a comment: *Lab 6 exercise*.
+
+![Create sample virtual machine security alerts](../Images/Create-Suppression-Rule.png)
+
 6.	Set rule expiration to be tomorrow (just a day ahead). **Click Apply and wait 10 minutes for the new rule to be applied.**
 7.	Validate your alert suppression rule:
     - From the top menu, click on the **Create sample alerts** button.
