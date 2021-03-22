@@ -15,6 +15,9 @@ Here let’s cover the new Alert Simulation, which should be out in the first we
 1.	Open the preview page of security alerts by using this [link](https://portal.azure.com/?feature.argsecurityalerts=true&feature.customportal=false#blade/Microsoft_Azure_Security/SecurityMenuBlade/7)
 2.	Create an alert simulation for VM:
     - On Security alerts page, click on **Sample alerts** button.
+    
+    ![Create sample virtual machine security alerts](../Images/SampleAlerts.png)
+    
     - Select **Azure subscription 1**.
     - On the Azure Defender plans, keep only **Virtual Machines** selected.
     - Click on the **Create sample alerts** button to trigger the alert simulation for VMs.
