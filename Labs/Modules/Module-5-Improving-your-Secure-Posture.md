@@ -66,7 +66,8 @@ To simulate a container registry image with vulnerabilities, we will use ACR tas
 
 1. On the Azure portal, navigate to **Container registries** blade or click [here](https://portal.azure.com/#blade/HubsExtension/BrowseResource/resourceType/Microsoft.ContainerRegistry%2Fregistries).
 2. Copy the name or your container registry, for example: *asclabcrktfvrxcne4kki*
-3.	Open [Azure Cloud Shell](https://shell.azure.com/) using the bash environment.
+3. Open [Azure Cloud Shell](https://shell.azure.com/) using the bash environment.
+5. When prompted, click **Create storage**, and wait for the Azure Cloud Shell to initialize. 
 4.	Build a Linux container image from the hello-world image hosted at Microsoft Container Registry and push it to the existing Azure Container Registry instance on your subscription:
 
 Run the the following two script blocks:
