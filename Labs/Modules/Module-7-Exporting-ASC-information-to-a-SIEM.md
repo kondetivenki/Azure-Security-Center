@@ -34,7 +34,7 @@ In this exercise, you will understand how to configure the continuous export for
 
 ![Continuous export settings page](../Images/log-analytic-started.png)
 
-14.	From the left pane, notice the following tables: `SecureScores`, `SecureScoreControls`, `SecurityAlert`, `SecurityRecommendation` and `SecurityNestedRecommendation`.
+14.	From the left pane, notice the following tables: `SecureityEvent`, `SecurityBaseline`, `SecurityBaselineSummary` and  `UpdateSummary`.
 
 ![Respective tables in the Log Analytics workspace](../Images/Log-editor-tables.png)
 
@@ -53,7 +53,7 @@ In this exercise, you will understand how to configure the continuous export for
 7.	On the Data connectors page, use the search field and type: *Azure Defender*.
 8.	Select the **Azure Defender** connector and then click on **Open connector page**.
 
-![ASC pricing & settings page](../Images/asc-sentinel-data-connectors.gif?raw=true)
+![ASC pricing & settings page](../Images/Azure-defender-open.png)
 
 9.	On the Configuration section, locate the **Azure subscription 1** and change the toggle button to **Connect**. Wait for the connection status to be: `Connected`.
 
