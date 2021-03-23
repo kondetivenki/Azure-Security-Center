@@ -5,7 +5,7 @@
 #### 🎓 Level: 100 (Beginner)
 #### ⌛ Estimated time to complete this lab: 30 minutes
 
-# Exercise 1: Log in to Azure Portal (as admin)
+### Exercise 1: Log in to Azure Portal (as admin)
 
 ## Instructions 
 
@@ -103,16 +103,19 @@
 
 10. If a **Welcome to Microsoft Azure** popup window appears, click **Maybe Later** to skip the tour.
 
-### Exercise 3: Enabling Azure Defender
+### Exercise 2: Enabling Azure Defender
 
 #### Subscription upgrade and agents installation
 1. Open **Azure Portal** and navigate to **Security Center** blade.
+
 2. Click on **Getting started** page from the left pane, On the **Upgrade** Tab, select subscription (Azure subscription 1) and press **Upgrade**.
 
 ![Overview: Inventory tile](../Images/get-started.png)
 
 3. Click on **Install agents**, if the button has been grayed out, then it's already set to **On**.
+
 4. Return to Azure security Center blade and Click on **Pricing & settings**.
+
 5. Your subscription (Azure subscription 1) should be listed and Azure Defender plan should be **On (partial)** (if it does not, close your browser session and open a new one).
 
 > Notice that you enabled Azure Defender at a subscription level, but Log Analytics workspace pricing is still set on Free (means Azure Defender is OFF).
@@ -127,15 +130,21 @@
 ![Enable Azure Defender on the workspace level](../Images/asc-enable-defender-workspace.gif?raw=true)
 
 3. Go back to the **Pricing & Setting** and drill down into your **Azure subscription** (Azure subscription 1).
+
 4. Navigate to **Auto provisioning**
+
 5. On the **Auto provisioning - Extensions** page, set **Log Analytics agent for Azure VMs** to **On** (if it's not already set to On)
+
 6. Click **Edit configuration**.
+
 7. On the workspace configuration section, use the **Connect Azure VMs to a different workspace** option to select your workspace **asc-lab-xxx** (which has been created by the ARM template).
+
 8. Under **Store additional raw data - Windows security events** section, select **All Events** option.
 
 ![Enable Azure Defender on the workspace level](../Images/asc-extension-deployment-configuration.png)
 
 9. Click on **Apply**.
+
 10. Click on **Save**.
 
 <br>
@@ -146,4 +155,7 @@
 > * You can enable Azure Defender trial for 30-days on a subscriptions only if not previously used.
 > * To enable Azure Defender on a subscription, you must be assigned the role of Subscription Owner, Subscription Contributor, or Security Admin.
 
-### Continue with the next lab: [Module 2 - Exploring Azure Security Center](../Modules/Module-2-Exploring-Azure-Security-Center.md)
+
+###Summary
+
+  * In this lab you have completed Enabling Azure Defender.
