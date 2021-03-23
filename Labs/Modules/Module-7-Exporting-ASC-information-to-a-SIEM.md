@@ -63,4 +63,3 @@ In this exercise, you will understand how to configure the continuous export for
 
 ![Enable incidents](../Images/asc-sentinel-enable-incidents.gif?raw=true)
 
-### Continue with the next lab: [Module 8 – Advance Cloud Defense](Module-8-Advance-Cloud-Defense.md)

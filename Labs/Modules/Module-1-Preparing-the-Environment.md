@@ -145,5 +145,3 @@
 > * Before clicking on the Upgrade button, you can review the total number of resources you are going to enable Azure Defender on.
 > * You can enable Azure Defender trial for 30-days on a subscriptions only if not previously used.
 > * To enable Azure Defender on a subscription, you must be assigned the role of Subscription Owner, Subscription Contributor, or Security Admin.
-
-### Continue with the next lab: [Module 2 - Exploring Azure Security Center](../Modules/Module-2-Exploring-Azure-Security-Center.md)

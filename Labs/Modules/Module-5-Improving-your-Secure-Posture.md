@@ -243,5 +243,3 @@ SecurityResources
 ![](../Images/run-query2.png)
 
 More details on the [official article](https://docs.microsoft.com/en-us/azure/security-center/secure-score-security-controls) or on the [blog post](https://techcommunity.microsoft.com/t5/azure-security-center/querying-your-secure-score-across-multiple-subscriptions-in/ba-p/1749193)
-
-### Continue with the next lab: [Module 6 - Azure Defender](../Modules/Module-6-Azure-Defender.md)

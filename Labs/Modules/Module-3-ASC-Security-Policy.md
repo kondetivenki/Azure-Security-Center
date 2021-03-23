@@ -196,4 +196,3 @@ Add each policy one by one:
 5.	On **Assign Initiative** page, select **Review + Create** and then **Create**.
 6.	Your custom initiative is now assigned.
 
-### Continue with the next lab: [Module 4 - Regulatory Compliance](../Modules/Module-4-Regulatory-Compliance.md)
