@@ -72,8 +72,10 @@ Exploring secure score
 3.	On the Secure Score page, **review your current overall secure score**.
 
 > ⭐ Notice: <br>
-> Your score is shown as a percentage value, but you can also see the number of points which the score is being calculated based on. See the following example: <br>
-> ![Overall Secure Score](../Images/asc-dashboard-score.gif?raw=true)<br>
+> Your score is shown as a percentage value, but you can also see the number of points which the score is being calculated based on. See the following example:
+> 
+> ![Overall Secure Score](../Images/asc-dashboard-score.gif?raw=true)
+> 
 > For more information on how the score is calculated, [refer to the secure score documentation page](https://docs.microsoft.com/en-us/azure/security-center/secure-score-security-controls#how-your-secure-score-is-calculated).
 
 4.	On the left side of the page, you can notice the **subscriptions with the lowest scores** – this section helps in prioritizing working on subscriptions. Since this demo is based on a single subscription, you will see only one.
